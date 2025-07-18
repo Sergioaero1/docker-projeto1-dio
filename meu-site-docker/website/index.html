@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio Docker + Apache</title>
+  <style>
+    :root {
+      --bg-light: #e0e9e8;
+      --text-light: #333;
+      --bg-dark: #050505;
+      --text-dark: #41ce21;
+      --accent: #007bff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: all 0.3s ease;
+    }
+
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    #eu{
+        color: red;
+    }
+
+    #dio{
+        color: rgb(78, 85, 219);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      padding: 0.7rem 1.5rem;
+      background-color: #050505;
+      color: rgb(254, 252, 252);
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="/meu-site-docker/Img/Ades.png" alt="Foto de Sergio" class="profile-img">
+    <h1>Olá, sou <h1 id="eu">Sergioaero!</h1></h1>
+    <h3>
+      Esta é minha landing page do desafio Docker + Apache. <br>
+      Modifiquei o projeto original criando um ambiente com Docker Compose, configurando o Apache para servir esta aplicação web. <br>
+      Personalizei o HTML e o CSS para criar uma página responsiva e moderna, com troca de tema claro/escuro.
+    </h3>
+    <h2 id="dio">DIO</h2>
+    <h2>TMJ - DIRETO DE NITEROI-RJ Sergioaero </h2>
+    <a href="https://github.com/Sergioaero1" target="_blank"><h3>Veja meu GitHub</h3></a><br>
+    <button onclick="toggleTheme()" id="bbuton"><h5>Alternar tema</h5></button>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
